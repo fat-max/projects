@@ -4,8 +4,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "FatMax",
   description: "Tools, creations & information",
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: { light: '/logo-dark.svg', dark: '/logo-light.svg' },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/markdown-examples' },
@@ -63,7 +65,15 @@ export default defineConfig({
       provider: 'local'
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/fat-max' }
-    ]
+      { icon: 'github', link: 'https://github.com/fat-max' },
+      { icon: 'youtube', link: 'https://www.youtube.com/@xmaxlev' },
+    ],
+    lastUpdated: {
+      text: 'Updated at',
+      formatOptions: {
+        dateStyle: 'medium',
+        timeStyle: 'medium'
+      }
+    },
   }
 })
