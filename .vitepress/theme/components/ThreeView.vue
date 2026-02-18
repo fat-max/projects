@@ -24,7 +24,6 @@ const loadModule = () => {
     const camera = new PerspectiveCamera(70, canvas.value.clientWidth / canvas.value.clientHeight, 1, 1000);
     renderer.setSize(canvas.value.clientWidth, canvas.value.clientHeight);
     // renderer.setClearColor(0xff00ff, 1);
-    // canvas.value.appendChild(renderer.domElement);
 
     window.addEventListener('resize', function () {
         renderer.setSize(canvas.value.clientWidth, canvas.value.clientHeight);
@@ -46,7 +45,7 @@ const loadModule = () => {
 
     scene.add(new HemisphereLight(0xffffff, 0x080820, 1.5));
     (new STLLoader()).load(props.item.src, function (geometry: geometry) {
-        const material = new MeshPhongMaterial({ color: 0xff5533, specular: 100, shininess: 100 });
+        const material = new MeshPhongMaterial({ color: 0xff00ff, specular: 100, shininess: 100 });
         const mesh = new Mesh(geometry, material);
         scene.add(mesh);
 
@@ -80,5 +79,7 @@ onMounted(() => loadModule())
 </script>
 
 <template>
+    <a :href="item.src" target="_blank"
+        class="absolute px-2 py-1 text-sm bg-orange-800 !text-white !no-underline rounded right-0">Download</a>
     <canvas class="h-80" ref="canvas" :key="item.src" />
 </template>

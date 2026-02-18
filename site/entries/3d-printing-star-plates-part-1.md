@@ -2,7 +2,7 @@
 title: 3d printing star plates (part 1)
 date: 2026-02-16
 description: First post in a series about printing a set of star plates
-img: ./assets/images/star-plate-test-print.jpg
+img: /images/star-plate-test-print.jpg
 tags:
   - 3d
   - pyro
@@ -19,27 +19,27 @@ The first print was made for 10 mm stars in a 4×4 layout to save material. Adju
   alt: 'Test printing star plate',
 },{
   src: '/3d/4-pin-test/test-print-v0.1.stl',
-  alt: 'Test printing star plate',
+  alt: 'Complete set',
   type: '3d',
 },{
   src: '/3d/4-pin-test/pin-plate.stl',
-  alt: 'Test printing star plate',
+  alt: 'Pin plate',
   type: '3d',
 },{
   src: '/3d/4-pin-test/hole-plate.stl',
-  alt: 'Test printing star plate',
+  alt: 'Hole plate',
   type: '3d',
 },{
   src: '/3d/4-pin-test/frame.stl',
-  alt: 'Test printing star plate',
+  alt: 'Frame',
   type: '3d',
 },{
   src: '/3d/4-pin-test/bottom.stl',
-  alt: 'Test printing star plate',
+  alt: 'Bottom',
   type: '3d',
 },{
   src: '/3d/4-pin-test/spacer.stl',
-  alt: 'Test printing star plate',
+  alt: 'Spacer',
   type: '3d',
 },]" />
 

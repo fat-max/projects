@@ -33,10 +33,6 @@ function formatTags(tags) {
         </a>
     </div>
 
-    <!-- <pre>
-        {{ entries }}
-    </pre> -->
-
     <!-- <div class="join">
         <button class="join-item btn btn-xs">1</button>
         <button class="join-item btn btn-xs btn-active">2</button>
