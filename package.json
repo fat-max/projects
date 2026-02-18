@@ -1,10 +1,24 @@
 {
   "devDependencies": {
-    "vitepress": "2.0.0-alpha.16"
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/node": "^25.2.3",
+    "@types/three": "^0.182.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3",
+    "unplugin-vue-components": "^31.0.0",
+    "vitepress": "2.0.0-alpha.16",
+    "vue": "^3.5.28"
   },
   "scripts": {
-    "site:dev": "vitepress dev site",
-    "site:build": "vitepress build site",
-    "site:preview": "vitepress preview site"
+    "site:dev": "vitepress dev",
+    "site:build": "vitepress build",
+    "site:preview": "vitepress preview",
+    "format": "prettier --write ."
+  },
+  "type": "module",
+  "dependencies": {
+    "three": "^0.182.0"
   }
 }

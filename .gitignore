@@ -1,6 +1,7 @@
 # Dependency directories
 node_modules/
+components.d.ts
 
 # site
-site/.vitepress/dist
-site/.vitepress/cache
+dist
+cache
