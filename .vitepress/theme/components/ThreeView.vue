@@ -32,14 +32,14 @@ const loadModule = () => {
     }, false);
 
     const controls = new OrbitControls(camera, renderer.domElement);
-    camera.position.set(0, 20, 100);
+    camera.position.set(0, 50, 100);
     controls.enableDamping = true;
     controls.rotateSpeed = 0.5;
     controls.dampingFactor = 0.1;
     controls.enableZoom = true;
     controls.enablePan = false;
-    // controls.autoRotate = true;
-    // controls.autoRotateSpeed = .75;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = .75;
 
     const scene = new Scene();
 

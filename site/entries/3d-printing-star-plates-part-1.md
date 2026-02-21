@@ -8,6 +8,8 @@ tags:
   - pyro
 ---
 
+# 3d printing star plates (part 1)
+
 I recently became interested in 3D printing, and naturally my thoughts turned to combining it with another interest of mine — fireworks.
 
 The first step is to print star plates for stars in different sizes, while keeping the outer dimensions of the plates the same. This ensures that the corresponding frame, spacers, and base plate will fit all molds.
@@ -18,28 +20,28 @@ The first print was made for 10 mm stars in a 4×4 layout to save material. Adju
   src: '/images/star-plate-test-print.jpg',
   alt: 'Test printing star plate',
 },{
-  src: '/3d/4-pin-test/test-print-v0.1.stl',
+  src: '/3d/starplate/4-pin-test/test-print-v0.1.stl',
   alt: 'Complete set',
   type: '3d',
 },{
-  src: '/3d/4-pin-test/pin-plate.stl',
+  src: '/3d/starplate/4-pin-test/pin-plate.stl',
   alt: 'Pin plate',
   type: '3d',
 },{
-  src: '/3d/4-pin-test/hole-plate.stl',
+  src: '/3d/starplate/4-pin-test/hole-plate.stl',
   alt: 'Hole plate',
   type: '3d',
 },{
-  src: '/3d/4-pin-test/frame.stl',
+  src: '/3d/starplate/4-pin-test/frame.stl',
   alt: 'Frame',
   type: '3d',
 },{
-  src: '/3d/4-pin-test/bottom.stl',
+  src: '/3d/starplate/4-pin-test/bottom.stl',
   alt: 'Bottom',
   type: '3d',
 },{
-  src: '/3d/4-pin-test/spacer.stl',
-  alt: 'Spacer',
+  src: '/3d/starplate/4-pin-test/spacer.stl',
+  alt: 'Test printing star plate',
   type: '3d',
 },]" />
 

@@ -1,10 +1,19 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
 import ThreeView from './ThreeView.vue'
+
 const props = defineProps(['items'])
 const selected = ref(props.items[0] ?? null)
+
 function update(item) {
     selected.value = item
+}
+
+function getThumb(item) {
+    if (item.type != '3d')
+        return item.src
+    console.log(item.src)
+    return '/images' + item.src.replace('.stl', '.png')
 }
 </script>
 
@@ -15,9 +24,9 @@ function update(item) {
             <img v-else :src="selected.src" class="h-full rounded-lg" :alt="selected.alt">
         </div>
 
-        <div class="grid grid-cols-4 max-w-3xl gap-4 h-24 items-center justify-center">
+        <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 max-w-3xl gap-4 items-center justify-center">
             <template v-for="item in items">
-                <img :src="item.src" :alt="item.alt" class="max-h-full rounded-lg" @click="update(item)" />
+                <img :src="getThumb(item)" :alt="item.alt" class="max-h-full rounded-lg" @click="update(item)" />
             </template>
         </div>
     </div>
