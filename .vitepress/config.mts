@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import Components from "unplugin-vue-components/vite";
 import { defineConfig } from "vitepress";
 
+const url = 'https://fatmax.se';
 const currentDir = dirname(fileURLToPath(import.meta.url));
 const componentsDir = resolve(currentDir, "theme", "components");
 
@@ -34,9 +35,32 @@ const pyroData = {
 export default defineConfig({
   title: "FatMax",
   description: "Tools, creations & information",
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  head: [
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ['meta', { name: 'twitter:site', content: '@QwertyLevin' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { property: 'og:image:type', content: 'image/png' }],
+    ['meta', { property: 'og:site_name', content: 'FatMax' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+  ],
   srcDir: "site",
   cleanUrls: true,
+  sitemap: {
+    hostname: url,
+  },
+  transformPageData(pageData) {
+    const canonicalUrl = `${url}${pageData.relativePath}`
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '')
+
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push([
+      'link',
+      { rel: 'canonical', href: canonicalUrl }
+    ])
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     siteTitle: false,

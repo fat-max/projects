@@ -12,16 +12,16 @@ function update(item) {
 function getThumb(item) {
     if (item.type != '3d')
         return item.src
-    console.log(item.src)
+
     return '/images' + item.src.replace('.stl', '.png')
 }
 </script>
 
 <template>
     <div class="items-center space-y-4">
-        <div class="w-full max-w-3xl h-80 flex justify-center">
+        <div class="w-full max-w-3xl flex justify-center">
             <ThreeView v-if="selected.type == '3d'" :item="selected" />
-            <img v-else :src="selected.src" class="h-full rounded-lg" :alt="selected.alt">
+            <img v-else :src="selected.src" class="rounded-lg" :alt="selected.alt">
         </div>
 
         <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 max-w-3xl gap-4 items-center justify-center">
