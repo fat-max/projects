@@ -85,7 +85,7 @@ onUnmounted(() => window.removeEventListener('resize', reSize))
 <template>
     <div class="h-full w-full" ref="container">
         <a :href="item.src" target="_blank"
-            class="absolute px-2 py-1 text-sm bg-orange-800 !text-white !no-underline rounded right-0">Download</a>
+            class="absolute text-white! no-underline! bg-orange-900 font-medium hover:bg-orange-800 tracking-wide text-xs px-4 py-1.5 border-0 outline-0 cursor-pointer right-0">Download</a>
         <canvas class="w-full h-full" ref="canvas" :key="item.src" />
     </div>
 </template>

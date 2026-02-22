@@ -119,6 +119,10 @@ export default defineConfig({
         link: "/",
       },
       pyroData,
+      {
+        text: "Contact",
+        link: "/contact",
+      },
     ],
 
     sidebar: [pyroData],
