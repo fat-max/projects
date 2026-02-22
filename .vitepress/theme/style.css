@@ -4,7 +4,9 @@
 @source "../../**/*.{vue,ts}";
 
 @custom-variant dark (&:where(.dark, .dark *));
-
+@theme {
+  --breakpoint-xs: 30rem;
+}
 /**
  * Customize default theme styling by overriding CSS variables:
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css

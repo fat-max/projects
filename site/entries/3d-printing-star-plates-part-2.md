@@ -3,6 +3,7 @@ title: 3d printing star plates (part 2)
 date: 2026-02-20
 description: Full size (120 * 120mm) 10 mm plate
 img: /images/star-plate-120x120-10mm-1.jpg
+next: false
 tags:
   - 3d
   - pyro
@@ -13,6 +14,7 @@ tags:
 First attempt at full-scale plates (120 × 120 mm) with 10 mm holes.  
 Due to tolerances, friction becomes significant when all 81 pins are installed.  
 I will later adjust the fit by slightly increasing the hole diameter.
+
 
 <ContentGallery :items="[{
   src: '/images/star-plate-120x120-10mm-1.jpg',

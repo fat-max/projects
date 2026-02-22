@@ -3,6 +3,7 @@ title: 3d printing star plates (part 1)
 date: 2026-02-16
 description: First post in a series about printing a set of star plates
 img: /images/star-plate-test-print.jpg
+next: false
 tags:
   - 3d
   - pyro

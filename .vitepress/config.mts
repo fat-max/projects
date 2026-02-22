@@ -50,16 +50,60 @@ export default defineConfig({
   sitemap: {
     hostname: url,
   },
-  transformPageData(pageData) {
+  transformPageData(pageData, { siteConfig }) {
+    pageData.frontmatter.head ??= []
+
     const canonicalUrl = `${url}${pageData.relativePath}`
       .replace(/index\.md$/, '')
       .replace(/\.md$/, '')
 
-    pageData.frontmatter.head ??= []
-    pageData.frontmatter.head.push([
-      'link',
-      { rel: 'canonical', href: canonicalUrl }
-    ])
+    pageData.frontmatter.head.push(
+      [
+        'link',
+        { rel: 'canonical', href: canonicalUrl }
+      ],
+      [
+        'meta',
+        {
+          property: 'og:title',
+          content:
+            pageData.frontmatter.title || pageData.title || siteConfig.site.title,
+        },
+      ],
+      [
+        'meta',
+        {
+          property: 'og:url',
+          content: canonicalUrl,
+        },
+      ],
+      [
+        'meta',
+        {
+          name: 'twitter:title',
+          content:
+            pageData.frontmatter.title || pageData.title || siteConfig.site.title,
+        },
+      ],
+      [
+        'meta',
+        {
+          property: 'og:description',
+          content:
+            pageData.frontmatter.description || pageData.description || siteConfig.site.description,
+        },
+      ],
+      [
+        'meta',
+        {
+          name: 'twitter:description',
+          content:
+            pageData.frontmatter.description || pageData.description || siteConfig.site.description,
+        },
+      ],
+    )
+
+
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
