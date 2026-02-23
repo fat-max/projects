@@ -62,7 +62,7 @@ export default defineConfig({
   transformPageData(pageData, { siteConfig }) {
     pageData.frontmatter.head ??= []
 
-    const canonicalUrl = `${url}${pageData.relativePath}`
+    const canonicalUrl = `${url}/${pageData.relativePath}`
       .replace(/index\.md$/, '')
       .replace(/\.md$/, '')
 
