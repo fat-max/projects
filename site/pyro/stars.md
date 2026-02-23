@@ -1,7 +1,3 @@
----
-layout: doc
----
-
 # Stars
 
 > Stars are the primary visual effect elements in pyrotechnics, engineered to burn in a controlled and sustained manner to produce light, color, sparks, or motion. Integrated with ignition and dispersion systems, they define the aesthetic character of an effect while adhering to strict performance and safety requirements.

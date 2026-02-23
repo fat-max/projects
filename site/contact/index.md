@@ -1,0 +1,8 @@
+---
+layout: page
+head:
+  - - script
+    - { async: '', defer: '', src: 'https://www.google.com/recaptcha/api.js' }
+---
+
+<FMContact />

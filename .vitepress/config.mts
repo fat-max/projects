@@ -28,6 +28,15 @@ const pyroData = {
         },
       ],
     },
+    {
+      text: "Misc",
+      items: [
+        {
+          text: "Tables",
+          link: "/pyro/tables",
+        },
+      ],
+    },
   ],
 };
 
@@ -102,8 +111,6 @@ export default defineConfig({
         },
       ],
     )
-
-
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

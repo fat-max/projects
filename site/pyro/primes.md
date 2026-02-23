@@ -1,7 +1,3 @@
----
-layout: doc
----
-
 # Primes
 
 > Primes are critical pyrotechnic interface layers that ensure reliable ignition and controlled fire transfer between an ignition source and the main composition. By providing predictable initiation and timing consistency, they play a key role in system performance and safety and are therefore treated as regulated engineering components rather than effect-producing materials.

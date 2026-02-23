@@ -1,7 +1,3 @@
----
-layout: doc
----
-
 # Burst charges
 
 > Burst charges are the driving force behind the expansion of many pyrotechnic effects, providing the rapid release of gas and pressure needed to open shells and disperse visual elements. Designed to burn quickly and predictably, they enable controlled spread rather than destructive force, making them a critical yet carefully regulated component in professional pyrotechnics.
