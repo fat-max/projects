@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
-import ThreeView from './ThreeView.vue'
+import ThreeView from './FMThree.vue'
 
 const props = defineProps(['items'])
 const selected = ref(props.items[0] ?? null)

@@ -35,6 +35,10 @@ const pyroData = {
           text: "Tables",
           link: "/pyro/tables",
         },
+        {
+          text: "Spiking template",
+          link: "/pyro/spiking",
+        },
       ],
     },
   ],

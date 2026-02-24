@@ -1,0 +1,3 @@
+# Spiking template
+
+<FMSpiking />
