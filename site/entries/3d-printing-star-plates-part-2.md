@@ -16,7 +16,7 @@ Due to tolerances, friction becomes significant when all 81 pins are installed.
 I will later adjust the fit by slightly increasing the hole diameter.
 
 
-<ContentGallery :items="[{
+<FMGallery :items="[{
   src: '/images/star-plate-120x120-10mm-1.jpg',
   alt: 'Test printing star plate',
 },{

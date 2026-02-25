@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
-import ThreeView from './FMThree.vue'
+import FMThree from './FMThree.vue'
 
 const props = defineProps(['items'])
 const selected = ref(props.items[0] ?? null)
@@ -20,7 +20,7 @@ function getThumb(item) {
 <template>
     <div class="items-center space-y-4">
         <div class="w-full max-w-3xl flex justify-center">
-            <ThreeView v-if="selected.type == '3d'" :item="selected" />
+            <FMThree v-if="selected.type == '3d'" :item="selected" />
             <img v-else :src="selected.src" class="rounded-lg" :alt="selected.alt">
         </div>
 

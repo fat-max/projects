@@ -13,7 +13,7 @@
   },
   "scripts": {
     "site:dev": "vitepress dev",
-    "site:build": "vitepress build",
+    "site:build": "git fetch --unshallow && vitepress build",
     "site:preview": "vitepress preview",
     "format": "prettier --write ."
   },

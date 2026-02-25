@@ -17,7 +17,7 @@ The first step is to print star plates for stars in different sizes, while keepi
 
 The first print was made for 10 mm stars in a 4×4 layout to save material. Adjustments were made to achieve a tighter fit for the pins.
 
-<ContentGallery :items="[{
+<FMGallery :items="[{
   src: '/images/star-plate-test-print.jpg',
   alt: 'Test printing star plate',
 },{
