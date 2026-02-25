@@ -5,53 +5,35 @@ const svg = ref(null)
 const size = ref(400)
 const radius = computed(() => size.value / 2)
 const strands = ref(16)
+const lines = ref([])
 
 watch(strands, (val: number) => {
   if (val % 4 != 0) return
-
-  svg.value.querySelectorAll('line').forEach(element => {
-    element.remove()
-  });
 
   calcLines()
 })
 
 const calcLines = () => {
-  let x, y, rads, offset = 0, lines = []
+  let x, y, rads, offset = 0, lineEnds = []
+
   for (let i = 0; i < strands.value * 2; i++) {
     if (i == strands.value) offset = 0.2
+
     rads = (i / strands.value) * Math.PI * 2 + offset
     x = radius.value * Math.cos(rads)
     y = radius.value * Math.sin(rads)
-    lines.push([x, y])
+    lineEnds.push([x, y])
   }
 
-  console.log(strands.value)
+  lines.value = []
   for (let i = 0; i < strands.value; i++) {
-    drawLine(lines[i], lines[strands.value + i])
+    lines.value.push([lineEnds[i], lineEnds[strands.value + i]])
   }
 }
 
-const drawLine = (start: number[], end: number[]) => {
-  const line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
-  line.setAttribute("x1", start[0] + radius.value)
-  line.setAttribute("y1", start[1] + radius.value)
-  line.setAttribute("x2", end[0] * -1 + radius.value)
-  line.setAttribute("y2", end[1] * -1 + radius.value)
-  line.setAttribute("stroke", "black")
-  line.setAttribute("stroke-width", "1")
-  svg.value.appendChild(line)
-}
+const getLines = computed(() => lines.value)
 
 onMounted(() => {
-  const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
-  circle.setAttribute("cx", radius.value)
-  circle.setAttribute("cy", radius.value)
-  circle.setAttribute("r", '10')
-  circle.setAttribute("fill", 'black')
-  circle.setAttribute("stroke", 'black')
-  svg.value.appendChild(circle)
-
   calcLines()
 })
 
@@ -65,6 +47,9 @@ onMounted(() => {
   <div class="flex flex-col items-center w-full">
     <svg :width="size" :height="size" xmlns="http://www.w3.org/2000/svg" ref="svg">
       <circle :cx="radius" :cy="radius" :r="radius - 1" fill="white" stroke="black" stroke-width="2" />
+      <circle :cx="radius" :cy="radius" :r="10" fill="black" />
+      <line v-for="line in getLines" :x1="line[0][0] + radius" :y1="line[0][1] + radius" :x2="line[1][0] * -1 + radius"
+        :y2="line[1][1] * -1 + radius" stroke="black" stroke-width="1" />
     </svg>
 
     <div class="flex gap-2 mt-6">
