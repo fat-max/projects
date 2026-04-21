@@ -3,6 +3,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import Components from "unplugin-vue-components/vite";
 import { defineConfig } from "vitepress";
+import { TableCalculator } from './plugins/table-calculator'
 
 const url = 'https://fatmax.se';
 const currentDir = dirname(fileURLToPath(import.meta.url));
@@ -178,6 +179,11 @@ export default defineConfig({
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2026'
+    }
+  },
+  markdown: {
+    config: (md) => {
+      md.use(TableCalculator)
     }
   },
   vite: {

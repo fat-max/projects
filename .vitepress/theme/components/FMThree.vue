@@ -50,7 +50,11 @@ const loadModule = () => {
     (new STLLoader()).load(props.item.src, function (geometry: geometry) {
         const material = new MeshPhongMaterial({ color: 0xff00ff, specular: 100, shininess: 100 });
         const mesh = new Mesh(geometry, material);
+        mesh.rotation.set(-Math.PI / 2, 0, 0);
         scene.add(mesh);
+
+
+        camera.value.lookAt(mesh.position);
 
         // Compute the middle
         const middle = new Vector3();
